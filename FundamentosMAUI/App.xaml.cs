@@ -6,7 +6,10 @@ public partial class App : Application
 	{
 		InitializeComponent();
 
-		MainPage = new AppShell();
+		MainPage = new ContentPage()
+		{
+			Content = new Label() { Text = new NameDevice().GetName() }
+		};
 	}
 }
 

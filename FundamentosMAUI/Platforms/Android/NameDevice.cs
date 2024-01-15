@@ -1,11 +1,20 @@
 ﻿using System;
-namespace FundamentosMAUI.Platforms.Android
+using Android.Content;
+using Android.Locations;
+using Android.Runtime;
+
+namespace FundamentosMAUI
 {
-	public class NameDevice
+	public partial class NameDevice
 	{
-		public NameDevice()
-		{
-		}
-	}
+        public partial string GetName()
+        {
+            var locationManager = Android.App.Application.Context
+                .GetSystemService(Context.LocationService)
+                .JavaCast<LocationManager>();
+
+            return locationManager.GnssHardwareModelName;
+        }
+    }
 }
 
