@@ -9,6 +9,8 @@ public partial class App : Application
         var boton = new Button();
 
         boton.Text = "Generar nueva ventana";
+        boton.FontSize = 20;
+        boton.FontFamily = "Montserrat";
         boton.Clicked += (s, a) =>
         {
             var ventana2 = new Window(new ContentPage());
@@ -18,10 +20,7 @@ public partial class App : Application
             OpenWindow(ventana2);
         };
 
-        MainPage = new ContentPage()
-        {
-            Content = boton
-		};
+        MainPage = new MainPage();
 	}
 
     protected override void OnResume()

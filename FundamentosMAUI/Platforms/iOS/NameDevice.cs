@@ -5,8 +5,8 @@ namespace FundamentosMAUI
 	{
 		public partial string GetName()
 		{
-			return null;
-		}
-	}
+            return Guid.NewGuid().ToString();
+        }
+    }
 }
 
